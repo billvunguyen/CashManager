@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "828928490497",
+    "project_id": "cashmanager-825cb",
+    "storage_bucket": "cashmanager-825cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828928490497:android:0021b648a65290fe929400",
+        "android_client_info": {
+          "package_name": "com.bill.cashmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828928490497-358mdgkhholqkond1hrofq26tsj9bvat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCejRrWImzUHeO9TrZ1i0ZR_0xs3Hr0qlk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828928490497-358mdgkhholqkond1hrofq26tsj9bvat.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
