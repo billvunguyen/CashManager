@@ -35,6 +35,13 @@
                 android:hint="Search your item here..."
                 android:drawablePadding="5dp"/>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_rec"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+
             <LinearLayout
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"

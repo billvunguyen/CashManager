@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.bill.cashmanager.R;
 import com.bill.cashmanager.adapter.ViewAllAdapter;
@@ -27,6 +29,7 @@ public class ViewAllActivity extends AppCompatActivity {
     ViewAllAdapter viewAllAdapter;
     List<ViewAllModel> viewAllModelListActivity;
     Toolbar toolbar;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +40,13 @@ public class ViewAllActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        progressBar = findViewById(R.id.progressbar_view_all);
+        progressBar.setVisibility(View.VISIBLE);
+
         firestore = FirebaseFirestore.getInstance();
         String type = getIntent().getStringExtra("type");
         recyclerView = findViewById(R.id.view_all_rec);
+        recyclerView.setVisibility(View.GONE);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         viewAllModelListActivity = new ArrayList<>();
@@ -56,6 +63,8 @@ public class ViewAllActivity extends AppCompatActivity {
                         ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
                         viewAllModelListActivity.add(viewAllModel);
                         viewAllAdapter.notifyDataSetChanged();
+                        progressBar.setVisibility(View.GONE);
+                        recyclerView.setVisibility(View.VISIBLE);
                     }
 
                 }
@@ -72,10 +81,88 @@ public class ViewAllActivity extends AppCompatActivity {
                             ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
                             viewAllModelListActivity.add(viewAllModel);
                             viewAllAdapter.notifyDataSetChanged();
+                            progressBar.setVisibility(View.GONE);
+                            recyclerView.setVisibility(View.VISIBLE);
                         }
 
                     }
                 });
+
+        }
+
+        // Getting fish
+        if(type != null && type.equalsIgnoreCase("fish")){
+            firestore.collection("AllProducts").whereEqualTo("type","fish").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                    for(DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
+                        ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
+                        viewAllModelListActivity.add(viewAllModel);
+                        viewAllAdapter.notifyDataSetChanged();
+                        progressBar.setVisibility(View.GONE);
+                        recyclerView.setVisibility(View.VISIBLE);
+                    }
+
+                }
+            });
+
+        }
+
+        // Getting egg
+        if(type != null && type.equalsIgnoreCase("egg")){
+            firestore.collection("AllProducts").whereEqualTo("type","egg").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                    for(DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
+                        ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
+                        viewAllModelListActivity.add(viewAllModel);
+                        viewAllAdapter.notifyDataSetChanged();
+                        progressBar.setVisibility(View.GONE);
+                        recyclerView.setVisibility(View.VISIBLE);
+                    }
+
+                }
+            });
+
+        }
+
+        // Getting milk
+        if(type != null && type.equalsIgnoreCase("milk")){
+            firestore.collection("AllProducts").whereEqualTo("type","milk").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                    for(DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
+                        ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
+                        viewAllModelListActivity.add(viewAllModel);
+                        viewAllAdapter.notifyDataSetChanged();
+                        progressBar.setVisibility(View.GONE);
+                        recyclerView.setVisibility(View.VISIBLE);
+                    }
+
+                }
+            });
+
+        }
+
+        // Getting milk
+        if(type != null && type.equalsIgnoreCase("product")){
+            firestore.collection("AllProducts").whereEqualTo("type","product").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                    for(DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
+                        ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
+                        viewAllModelListActivity.add(viewAllModel);
+                        viewAllAdapter.notifyDataSetChanged();
+                        progressBar.setVisibility(View.GONE);
+                        recyclerView.setVisibility(View.VISIBLE);
+                    }
+
+                }
+            });
 
         }
     }

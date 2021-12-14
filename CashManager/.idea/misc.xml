@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/account.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/add_circle.xml" value="0.21510416666666668" />
         <entry key="app/src/main/res/drawable/border.xml" value="0.35052083333333334" />
+        <entry key="app/src/main/res/drawable/border_radius.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/drawable/btn_bg_detailed.xml" value="0.19814814814814816" />
         <entry key="app/src/main/res/drawable/edittext_background.xml" value="0.10185185185185185" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.35052083333333334" />
         <entry key="app/src/main/res/drawable/ic_baseline_category_24.xml" value="0.21770833333333334" />
@@ -16,23 +19,34 @@
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.21770833333333334" />
         <entry key="app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.21770833333333334" />
         <entry key="app/src/main/res/drawable/keylog.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/drawable/remove_circle.xml" value="0.21510416666666668" />
+        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.3541666666666667" />
+        <entry key="app/src/main/res/layout/activity_detailed.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2015625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_nav_category.xml" value="0.42604166666666665" />
+        <entry key="app/src/main/res/layout/activity_payment_method.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_payment_stripe.xml" value="0.27291666666666664" />
+        <entry key="app/src/main/res/layout/activity_placed_order.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_registration.xml" value="0.1925925925925926" />
-        <entry key="app/src/main/res/layout/activity_view_all.xml" value="0.334375" />
+        <entry key="app/src/main/res/layout/activity_view_all.xml" value="0.23822714681440443" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.3375" />
-        <entry key="app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_category.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.5635416666666667" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_my_carts.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_my_oders.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_my_carts.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_my_oders.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_new_products.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_offers.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.3380208333333333" />
         <entry key="app/src/main/res/layout/home_cat_items.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/nav_cat_item.xml" value="0.334375" />
+        <entry key="app/src/main/res/layout/my_cart_item.xml" value="0.42604166666666665" />
+        <entry key="app/src/main/res/layout/my_orders_item.xml" value="0.19519927536231885" />
+        <entry key="app/src/main/res/layout/nav_cat_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/nav_category_detailed_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.3375" />
         <entry key="app/src/main/res/layout/popular_item.xml" value="0.375" />
         <entry key="app/src/main/res/layout/recommended_item.xml" value="0.3390625" />
@@ -41,6 +55,7 @@
         <entry key="app/src/main/res/menu/main.xml" value="0.3375" />
         <entry key="app/src/main/res/menu/main_activity2.xml" value="0.3375" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.33958333333333335" />
       </map>
     </option>
   </component>

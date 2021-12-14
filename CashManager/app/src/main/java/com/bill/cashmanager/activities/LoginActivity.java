@@ -13,7 +13,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bill.cashmanager.MainActivity;
 import com.bill.cashmanager.R;
+import com.bill.cashmanager.ui.home.HomeFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -88,6 +90,7 @@ public class LoginActivity extends AppCompatActivity {
                         if(task.isSuccessful()) {
                             progressBar.setVisibility(View.GONE);
                             Toast.makeText(LoginActivity.this, "Login Successfully", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
                         }
                         else {
                             progressBar.setVisibility(View.GONE);

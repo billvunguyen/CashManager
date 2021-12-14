@@ -1,6 +1,7 @@
 package com.bill.cashmanager.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bill.cashmanager.R;
+import com.bill.cashmanager.activities.NavCategoryActivity;
 import com.bill.cashmanager.models.NavCategoryModel;
 import com.bumptech.glide.Glide;
 
@@ -38,6 +40,15 @@ public class NavCategoryAdapter extends RecyclerView.Adapter<NavCategoryAdapter.
         holder.name.setText(list.get(position).getName());
         holder.description.setText(list.get(position).getDescription());
         holder.discount.setText(list.get(position).getDiscount());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, NavCategoryActivity.class);
+                intent.putExtra("type",list.get(position).getType());
+                context.startActivity(intent);
+            }
+        });
 
     }
 

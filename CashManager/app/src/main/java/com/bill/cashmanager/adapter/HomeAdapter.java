@@ -1,6 +1,7 @@
 package com.bill.cashmanager.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bill.cashmanager.R;
+import com.bill.cashmanager.activities.ViewAllActivity;
 import com.bill.cashmanager.models.HomeCategory;
 import com.bumptech.glide.Glide;
 
@@ -36,6 +38,15 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Glide.with(context).load(categoryList.get(position).getImg_url()).into(holder.catImg);
         holder.name.setText(categoryList.get(position).getName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ViewAllActivity.class);
+                intent.putExtra("type",categoryList.get(position).getType());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

@@ -1,17 +1,19 @@
 package com.bill.cashmanager.models;
 
-public class ViewAllModel {
+import java.io.Serializable;
+
+public class ViewAllModel implements Serializable {
     String name;
     String description;
     String img_url;
-    String price;
+    int price;
     String type;
     String rating;
 
     public ViewAllModel() {
     }
 
-    public ViewAllModel(String name, String description, String img_url, String price, String type, String rating) {
+    public ViewAllModel(String name, String description, String img_url, int price, String type, String rating) {
         this.name = name;
         this.description = description;
         this.img_url = img_url;
@@ -44,11 +46,11 @@ public class ViewAllModel {
         this.img_url = img_url;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
